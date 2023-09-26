@@ -1,0 +1,40 @@
+.article {
+  padding: 80px 75px;
+}
+
+.article-title {
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.article-text:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.wrapper-text {
+  margin-bottom: 160px;
+}
+
+.article-link-back {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
+  color: inherit;
+}
+
+.article-link-back::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../img/arr-back.svg') center/cover no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.article-author {
+  display: inline-block;
+  margin-left: 870px;
+}
