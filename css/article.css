@@ -21,6 +21,7 @@
 }
 
 .article-author {
-  display: inline-block;
-  margin-left: 1000px;
+  display: block;
+  margin-top: 0;
+  float: right;
 }
