@@ -1,13 +1,13 @@
 .article-title {
   font-size: 50px;
   font-weight: 700;
-  line-height: 130%;
+  line-height: 65px;
 }
 
 .article-link-back {
   font-size: 16px;
   font-weight: 700;
-  line-height: 130%;
+  line-height: 20.8px;
 }
 
 .article-link-back::before {
