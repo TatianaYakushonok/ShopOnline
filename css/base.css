@@ -1,25 +1,39 @@
 @font-face {
   font-family: Lato;
-  src: local("Lato-Regular"),
-      local("Lato Regular"),
-      url("../fonts/lato-regular.woff2") format("woff2"),
-      url("../fonts/lato-regular.woff") format("woff");
+  src: local("Lato-Regular"), local("Lato Regular"), url("../fonts/lato-regular.woff2") format("woff2"), url("../fonts/lato-regular.woff") format("woff");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: Lato;
-  src: local("Lato-Bold"),
-      local("Lato Bold"),
-      url("../fonts/lato-bold.woff2") format("woff2"),
-      url("../fonts/lato-bold.woff") format("woff");
+  src: local("Lato-Bold"), local("Lato Bold"), url("../fonts/lato-bold.woff2") format("woff2"), url("../fonts/lato-bold.woff") format("woff");
   font-weight: 700;
   font-display: swap;
 }
 
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+  min-height: 100vh;
   font-family: Lato, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   font-size: 22px;
   font-weight: 400;
   line-height: 1.5;
@@ -29,4 +43,11 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
