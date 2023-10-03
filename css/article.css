@@ -1,26 +1,26 @@
-.article-title {
+.article__title {
   font-size: 50px;
   font-weight: 700;
   line-height: 1.3;
 }
 
-.article-link-back {
+.article__link_back {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.3;
 }
 
-.article-link-back::before {
-  content: '';
+.article__link_back::before {
+  content: "";
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url('../img/arr-back.svg') center/cover no-repeat;
+  background: url("../img/arr-back.svg") center/cover no-repeat;
   vertical-align: middle;
   margin-right: 10px;
 }
 
-.article-author {
+.article__author {
   display: block;
   margin-top: 0;
   float: right;
