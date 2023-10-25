@@ -1,0 +1,10 @@
+:root {
+  --color-text: #fff;
+  --color-btn: #3670c7;
+  --color-discount: #ffbd13;
+  --color-promo: #38c0eb;
+  --color-text-promo: #f91155;
+
+  --grid-column-width: 92px;
+  --grid-gap: 60px;
+}

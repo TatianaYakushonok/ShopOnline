@@ -1,13 +1,13 @@
 @font-face {
   font-family: Lato;
-  src: local("Lato-Regular"), local("Lato Regular"), url("../fonts/lato-regular.woff2") format("woff2"), url("../fonts/lato-regular.woff") format("woff");
+  src: local('Lato-Regular'), local('Lato Regular'), url('../fonts/lato-regular.woff2') format('woff2'), url('../fonts/lato-regular.woff') format('woff');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: Lato;
-  src: local("Lato-Bold"), local("Lato Bold"), url("../fonts/lato-bold.woff2") format("woff2"), url("../fonts/lato-bold.woff") format("woff");
+  src: local('Lato-Bold'), local('Lato Bold'), url('../fonts/lato-bold.woff2') format('woff2'), url('../fonts/lato-bold.woff') format('woff');
   font-weight: 700;
   font-display: swap;
 }
@@ -45,9 +45,72 @@ a {
   color: inherit;
 }
 
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-height: 100%;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
 h1,
 h2,
 h3,
 p {
   margin: 0;
+}
+
+.container {
+  --width-container: 1770px;
+  --padding-container: 30px;
+  max-width: calc(var(--width-container) + var(--padding-container) * 2);
+  padding: 0 var(--padding-container);
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, var(--grid-column-width));
+  gap: var(--grid-gap);
+  align-items: center;
+}
+
+@media (max-width: 1770px) {
+  .container {
+    --width-container: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    --width-container: 940px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    --width-container: 700px;
+  }
+}
+
+@media (max-width: 470px) {
+  .container {
+    --padding-container: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    --width-container: 280px;
+  }
 }

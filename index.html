@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet">
+  <title>Shop Online</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header__container">
+      <svg class="header__logo" viewBox="0 0 188 31" role="img"
+        aria-label="Логотип Shop Online">
+        <use xlink:href="./img/sprite.svg#logo"></use>
+      </svg>
+
+      <button class="header__btn" type="button">
+        <svg class="header__icon-menu">
+          <use xlink:href="./img/sprite.svg#menu-ico"></use>
+        </svg>
+        Меню
+      </button>
+
+      <form class="header__form search">
+        <input class="header__input search__input" type="search"
+          placeholder="Я ищу...">
+        <button class="header__btn-search search__btn" type="submit">
+          <svg class="header__icon search__icon">
+            <use xlink:href="./img/sprite.svg#search-ico"></use>
+          </svg>
+        </button>
+      </form>
+
+      <div class="header__btns">
+        <button class="header__btn-icon" type="button">
+          <svg class="header__icon header__icon_user">
+            <use xlink:href="./img/sprite.svg#user-ico"></use>
+          </svg>
+          <span class="header__btn-icon-text">Профиль</span>
+        </button>
+        <button class="header__btn-icon" type="button">
+          <svg class="header__icon header__icon_cart">
+            <use xlink:href="./img/sprite.svg#shopping-cart"></use>
+          </svg>
+          <span class="header__btn-icon-text">Корзина</span>
+        </button>
+        <button class="header__btn-icon" type="button">
+          <svg class="header__icon header__icon_favorite">
+            <use xlink:href="./img/sprite.svg#favorite-ico"></use>
+          </svg>
+          <span class="header__btn-icon-text">Избранное</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="banner">
+      <div class="container banner__container">
+        <h2 class="banner__title">-50% на все ноутбуки</h2>
+
+        <div class="banner__timer">
+          <p>До конца акции:</p>
+          <p><span>3</span> дня</p>
+          <p><span>8</span> часов</p>
+          <p><span>43</span> минуты</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"></footer>
+</body>
+
+</html>

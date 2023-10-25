@@ -1,3 +1,5 @@
-@import "normalize.css";
-@import "base.css";
-@import "article.css";
+@import 'normalize.css';
+@import 'var.css';
+@import 'base.css';
+@import 'header.css';
+@import 'article.css';
