@@ -38,8 +38,6 @@
 .search {
   position: relative;
   width: 100%;
-  /*width: 757px;
-  max-width: 100%;*/
   grid-area: search;
 }
 
