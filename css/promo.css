@@ -97,7 +97,7 @@
   grid-column: span 4;
   grid-row: span 4;
   line-height: 1.2;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-5.jpeg') center right -50px/110% no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-5.jpeg') center / cover no-repeat;
 }
 
 .promo__box_4 {
@@ -118,7 +118,7 @@
 .promo__box_6 {
   grid-column: span 4;
   grid-row: span 2;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-8.jpeg') center bottom -50px / cover no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-8.jpeg') center / cover no-repeat;
 }
 
 .promo__box_7 {
@@ -126,7 +126,7 @@
   padding: 50px;
   grid-column: span 8;
   grid-row: span 4;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-6.jpeg') center bottom / cover no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-6.jpeg') center / cover no-repeat;
 }
 
 .promo__box_8 {
@@ -147,7 +147,7 @@
   justify-content: space-between;
   grid-column: span 2;
   grid-row: span 2;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-11.jpeg') right/210% no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-11.jpeg') right/cover no-repeat;
 }
 
 @media (max-width: 1024px) {
@@ -287,7 +287,7 @@
   }
 
   .promo__box_9 {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-10.jpeg') center right -34px / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-10.jpeg') center / cover no-repeat;
   }
 
   .promo__box_10 {
