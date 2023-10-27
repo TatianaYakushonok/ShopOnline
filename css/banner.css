@@ -11,12 +11,12 @@
   align-items: center;
   padding: 145px 112px 40px;
   border-radius: 20px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url('../img/promo-img.jpg') center/cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url('../img/promo-img.jpg') center left -10px/110% no-repeat;
 }
 
 .banner__title {
   align-self: flex-start;
-  margin-bottom: 100px;
+  margin-bottom: 106px;
   font-size: 70px;
 }
 
@@ -43,16 +43,22 @@
 
   .banner__container {
     padding: 80px 80px 36px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url('../img/promo-img.jpg') center/cover no-repeat;
   }
 
   .banner__title {
     max-width: 401px;
+    margin-bottom: 11px;
     font-size: 40px;
   }
 
   .timer__container {
     gap: 20px;
     font-size: 20px;
+  }
+
+  .timer__title {
+    margin-bottom: 10px;
   }
 
   .timer__time {
@@ -62,11 +68,12 @@
 
 @media (max-width: 768px) {
   .banner {
-    padding: 25px 0 10px;
+    padding: 25px 0 20px;
   }
 
   .banner__container {
-    padding: 64px 80px 30px;
+    padding: 64px 80px 30.5px;
+    border-radius: 16px;
   }
 
   .banner__title {
@@ -80,6 +87,10 @@
     font-size: 16px;
   }
 
+  .timer__title {
+    font-size: 12px;
+  }
+
   .timer__time {
     font-size: 30px;
   }
@@ -91,7 +102,8 @@
   }
 
   .banner__container {
-    padding: 50px 23px 30px;
+    padding: 50px 29px 30px;
+    border-radius: 8px;
   }
 
   .banner__title {
@@ -100,6 +112,7 @@
   }
 
   .timer__title {
+    margin-bottom: 6px;
     font-size: 8px;
   }
 
