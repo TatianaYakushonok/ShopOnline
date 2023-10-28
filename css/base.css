@@ -85,7 +85,7 @@ p {
 
 .gallery {
   display: grid;
-  grid-gap: 60px;
+  gap: 60px;
   grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
   grid-auto-rows: 92.5px;
   grid-auto-flow: dense;
@@ -97,14 +97,18 @@ p {
   }
 }
 
+@media (max-width: 1118px) {
+  .gallery {
+    gap: 24px;
+  }
+}
+
 @media (max-width: 1024px) {
   .container {
     --width-container: 940px;
   }
 
   .gallery {
-    grid-gap: 24px;
-    grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
     grid-auto-rows: 96.5px;
   }
 }

@@ -105,14 +105,14 @@
   grid-row: span 2;
   padding: 30px;
   line-height: 1.2;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-7.jpeg') center bottom -50px / cover no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-7.jpeg') center / cover no-repeat;
 }
 
 .promo__box_5 {
   justify-content: flex-start;
   grid-column: span 4;
   grid-row: span 2;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-4.jpeg') center bottom -41px / cover no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo-img-4.jpeg') center / cover no-repeat;
 }
 
 .promo__box_6 {
@@ -194,6 +194,7 @@
   }
 
   .promo__box_7 {
+    grid-column: 1/-1;
     max-height: 418px;
     padding: 39px 30px;
   }
