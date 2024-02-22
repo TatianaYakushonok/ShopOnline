@@ -1,4 +1,49 @@
+const declOfNum = (num, words) => {
+  return words[
+    num == 1 || (num > 19 && num % 10 == 1)
+      ? 0
+      : (num > 1 && num < 5) || (num > 19 && num % 10 > 1 && num % 10 < 5)
+      ? 1
+      : 2
+  ];
+};
+
+const createTimer = (item) => {
+  const bannerTimer = document.querySelector('.banner__timer');
+  bannerTimer.classList.add('timer');
+  bannerTimer.insertAdjacentHTML(
+    'beforeend',
+    `
+    <p class="timer__title">До конца акции:</p>
+
+    <div class="timer__container">
+      <p class="timer__item timer__item_days"><span
+          class="timer__count timer__count_days">${item.days}</span>
+        <span class="timer__units timer__units_days">${item.strDays}</span>
+      </p>
+      <p class="timer__item timer__item_hours"><span
+          class="timer__count timer__count_hours">${item.hours}</span>
+        <span class="timer__units timer__units_hours">${item.strHours}</span>
+      </p>
+      <p class="timer__item timer__item_minutes"><span
+          class="timer__count timer__count_minutes">${item.minutes}</span>
+        <span class="timer__units timer__units_minutes">${item.strMinutes}</span>
+      </p>
+      <p class="timer__item timer__item_seconds"><span
+          class="timer__count timer__count_seconds">${item.seconds}</span>
+        <span class="timer__units timer__units_seconds">${item.strSeconds}</span>
+      </p>
+    </div>
+    `,
+  );
+
+  return bannerTimer;
+};
+
 export const timer = (deadline) => {
+  const timer = getTimeRemaining();
+  createTimer(timer);
+
   const bannerTimer = document.querySelector('.timer');
   const timerCountDays = document.querySelector('.timer__count_days');
   const timerCountHours = document.querySelector('.timer__count_hours');
@@ -11,7 +56,7 @@ export const timer = (deadline) => {
   const timerItemdays = document.querySelector('.timer__item_days');
   const timerItemSeconds = document.querySelector('.timer__item_seconds');
 
-  const getTimeRemaining = () => {
+  function getTimeRemaining() {
     const date = new Date(deadline).toLocaleString('ru-RU', {
       timeZone: 'Europe/Moscow',
     });
@@ -27,8 +72,28 @@ export const timer = (deadline) => {
     const hours = Math.floor((timeRemaining / 1000 / 60 / 60) % 24);
     const days = Math.floor((timeRemaining / 1000 / 60 / 60 / 24) % 24);
 
-    return { timeRemaining, seconds, minutes, hours, days };
-  };
+    const arrDays = ['день', 'дня', 'дней'];
+    const arrHours = ['час', 'часа', 'часов'];
+    const arrMinutes = ['минута', 'минуты', 'минут'];
+    const arrSeconds = ['секунда', 'секунды', 'секунд'];
+
+    const strDays = declOfNum(days, arrDays);
+    const strHours = declOfNum(hours, arrHours);
+    const strMinutes = declOfNum(minutes, arrMinutes);
+    const strSeconds = declOfNum(second, arrSeconds);
+
+    return {
+      timeRemaining,
+      seconds,
+      minutes,
+      hours,
+      days,
+      strDays,
+      strHours,
+      strMinutes,
+      strSeconds,
+    };
+  }
 
   const start = () => {
     const timer = getTimeRemaining();
@@ -37,16 +102,12 @@ export const timer = (deadline) => {
       timerCountDays.textContent = timer.days;
       timerCountHours.textContent = String(timer.hours).padStart(2, '0');
       timerCountMinutes.textContent = String(timer.minutes).padStart(2, '0');
-      if (timerCountSeconds) {
-        timerCountSeconds.textContent = String(timer.seconds).padStart(2, '0');
-      }
+      timerCountSeconds.textContent = String(timer.seconds).padStart(2, '0');
     } else {
       timerCountDays.textContent = timer.days;
       timerCountHours.textContent = timer.hours;
       timerCountMinutes.textContent = timer.minutes;
-      if (timerCountSeconds) {
-        timerCountSeconds.textContent = timer.seconds;
-      }
+      timerCountSeconds.textContent = timer.seconds;
     }
 
     if (timer.days === 0) {
@@ -54,43 +115,10 @@ export const timer = (deadline) => {
       timerItemSeconds.style.display = 'block';
     }
 
-    const strDays =
-      timer.days == 1 || (timer.days > 19 && timer.days % 10 == 1)
-        ? 'день'
-        : (timer.days > 1 && timer.days < 5) ||
-          (timer.days > 19 && timer.days % 10 > 1 && timer.days % 10 < 5)
-        ? 'дня'
-        : 'дней';
-    const strHours =
-      timer.hours == 1 || (timer.hours > 19 && timer.hours % 10 == 1)
-        ? 'час'
-        : (timer.hours > 1 && timer.hours < 5) ||
-          (timer.hours > 19 && timer.hours % 10 > 1 && timer.hours % 10 < 5)
-        ? 'часа'
-        : 'часов';
-    const strMinutes =
-      timer.minutes == 1 || (timer.minutes > 19 && timer.minutes % 10 == 1)
-        ? 'минута'
-        : (timer.minutes > 1 && timer.minutes < 5) ||
-          (timer.minutes > 19 &&
-            timer.minutes % 10 > 1 &&
-            timer.minutes % 10 < 5)
-        ? 'минуты'
-        : 'минут';
-    const strSeconds =
-      timer.seconds == 1 || (timer.seconds > 19 && timer.seconds % 10 == 1)
-        ? 'секунда'
-        : (timer.seconds > 1 && timer.seconds < 5) ||
-          (timer.seconds > 19 &&
-            timer.seconds % 10 > 1 &&
-            timer.seconds % 10 < 5)
-        ? 'секунды'
-        : 'секунд';
-
-    timerUnitsDays.textContent = strDays;
-    timerUnitsHours.textContent = strHours;
-    timerUnitsMinutes.textContent = strMinutes;
-    timerUnitsSeconds.textContent = strSeconds;
+    timerUnitsDays.textContent = timer.strDays;
+    timerUnitsHours.textContent = timer.strHours;
+    timerUnitsMinutes.textContent = timer.strMinutes;
+    timerUnitsSeconds.textContent = timer.strSeconds;
 
     const intervalId = setTimeout(start, 1000);
 
