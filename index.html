@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/style.css" rel="stylesheet">
+  <script type="module" src="js/script.js"></script>
   <title>Shop Online</title>
 </head>
 
@@ -63,15 +64,26 @@
         <div class="banner__container">
           <h2 class="banner__title">-50% на все ноутбуки</h2>
 
-          <div class="banner__timer timer">
+          <div class="banner__timer timer"
+            data-timer-deadline="2024/02/28 20:00">
             <p class="timer__title">До конца акции:</p>
 
             <div class="timer__container">
-              <p class="timer__days"><span class="timer__time">3</span>дня</p>
-              <p class="timer__hours"><span class="timer__time">8</span>часов
+              <p class="timer__item timer__item_days"><span
+                  class="timer__count timer__count_days"></span>
+                <span class="timer__units timer__units_days"></span>
               </p>
-              <p class="timer__minutes"><span
-                  class="timer__time">43</span>минуты
+              <p class="timer__item timer__item_hours"><span
+                  class="timer__count timer__count_hours"></span>
+                <span class="timer__units timer__units_hours"></span>
+              </p>
+              <p class="timer__item timer__item_minutes"><span
+                  class="timer__count timer__count_minutes"></span>
+                <span class="timer__units timer__units_minutes"></span>
+              </p>
+              <p class="timer__item timer__item_seconds"><span
+                  class="timer__count timer__count_seconds"></span>
+                <span class="timer__units timer__units_seconds"></span>
               </p>
             </div>
           </div>

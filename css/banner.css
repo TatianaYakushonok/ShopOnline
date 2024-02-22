@@ -11,7 +11,12 @@
   align-items: center;
   padding: 145px 112px 40px;
   border-radius: 20px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url('../img/promo-img.jpg') center left -10px/110% no-repeat;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    url('../img/promo-img.jpg') center left -10px/110% no-repeat;
 }
 
 .banner__title {
@@ -31,9 +36,13 @@
   font-size: 32px;
 }
 
-.timer__time {
+.timer__count {
   margin-right: 6px;
   font-size: 60px;
+}
+
+.timer__item_seconds {
+  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -43,7 +52,12 @@
 
   .banner__container {
     padding: 80px 80px 36px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url('../img/promo-img.jpg') center/cover no-repeat;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 100%
+      ),
+      url('../img/promo-img.jpg') center/cover no-repeat;
   }
 
   .banner__title {
