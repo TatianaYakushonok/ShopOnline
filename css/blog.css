@@ -1,0 +1,39 @@
+.blog__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.posts {
+  --width-container: 1443px;
+  --padding-container: 30px;
+  max-width: calc(var(--width-container) + var(--padding-container) * 2);
+  padding: 80px var(--padding-container) 192px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.post {
+  max-width: 645px;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.post__img {
+  width: 195px;
+  height: 195px;
+  border-radius: 20px;
+}
+
+.post__title {
+  font-size: 38px;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+.post__link:hover {
+  text-decoration: underline;
+}
